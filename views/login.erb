@@ -1,0 +1,12 @@
+﻿<form action="/login" method="post">
+    <% if @error %>
+        <h3>الرجاء التأكد من إدخال إسم المستخدم وكلمة المرور بشكل صحيح</h3>
+    <% end %>
+    <label>إسم المستخدم</label>
+    <input type="text" name="username">
+    
+    <label>كملة المرور</label>
+    <input type="password" name="password">
+    <input type="submit" value="تسجيل الدخول">
+    
+</form>

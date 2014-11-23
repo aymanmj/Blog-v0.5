@@ -1,0 +1,12 @@
+﻿<form action="/admin/edit_blog/<%= @blog[:id] %>" method="post">
+    <label>عنوان التدوينة</label>
+    <input type="text" name="title" value="<%= @blog[:title] %>">
+    
+    <label>مختصر التدوينة</label>
+    <textarea name="summary" rows="10"><%= @blog[:summary] %></textarea>
+    
+    <label>محتوى التدوينة</label>
+    <textarea name="content" rows="20"><%= @blog[:content] %></textarea>
+    
+    <input type="submit" value="تعديل التدوينة">
+</form>
