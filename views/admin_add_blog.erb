@@ -1,12 +1,18 @@
-﻿<form action="/admin/add_blog" method="post">
-    <label>عنوان التدوينة</label>
-    <input type="text" name="title">
-    
-    <label>مختصر التدوينة</label>
-    <textarea name="summary" rows="10"></textarea>
-    
-    <label>محتوى التدوينة</label>
-    <textarea name="content" rows="20"></textarea>
-    
-    <input type="submit" value="أضف التدوينة">
+﻿<h1>تدوينة جديدة</h1>
+<form action="/admin/add_blog" method="post">
+    <div class="form-group">
+        <label>عنوان التدوينة</label>
+        <input type="text" name="title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>مختصر التدوينة</label>
+        <textarea name="summary" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>محتوى التدوينة</label>
+        <textarea name="content" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="أضف التدوينة" class="btn btn-primary">
+    </div>    
 </form>

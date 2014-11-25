@@ -1,5 +1,14 @@
-﻿<a href="/admin/add_blog" class="btn">أضف تدوينة جديدة</a>
-<a href="/logout" class="btn">تسجيل الخروج</a>
+﻿<a href="/admin/add_blog" class="btn btn-primary">أضف تدوينة جديدة</a>
+<a href="/logout" class="btn btn-primary">تسجيل الخروج</a>
+<p></p>
+
+<% if flash.now[:notice] != "" %>
+    <p class="alert alert-info">
+        <%= flash[:notice] %>
+    </p>
+<% end %>
+
+<p></p>
 <ul id="admin-blog-list">
     <% @blogs.each do |b| %>
         <li>

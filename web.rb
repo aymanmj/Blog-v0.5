@@ -1,5 +1,8 @@
 ﻿require 'sinatra'
 require 'sequel'
+require 'sinatra/flash'
+require 'rdiscount'
+
 enable :sessions
 
 
@@ -15,6 +18,7 @@ end
 
 get '/blog/:id' do
     @blog = DB[:blogs].where(:id => params[:id]).first
+    
     erb :blog
 end
 
@@ -43,6 +47,7 @@ post '/admin/add_blog' do
     DB[:blogs].insert(:title => title, :summary => summary, 
     :content => content)
     
+    flash[:notice] = 'تمت إضافة التدوينة بنجاح'
     redirect '/admin'
 end
 
@@ -59,7 +64,7 @@ post '/admin/edit_blog/:id' do
     DB[:blogs].where(:id => params[:id]).update(:title => title,
                                                :summary => summary,
                                                :content => content)
-    
+    flash[:notice] = 'تم تعديل التدوينة بنجاح'
     redirect '/admin'
 end
 
