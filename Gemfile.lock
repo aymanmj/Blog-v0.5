@@ -1,9 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    pg (0.17.1-x64-mingw32)
+    pg (0.17.1-x86-mingw32)
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
+    sequel (4.16.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -12,6 +15,9 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
+  pg
+  sequel
   sinatra
