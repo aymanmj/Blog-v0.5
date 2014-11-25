@@ -2,94 +2,33 @@
 <HTML>
    <HEAD>
       <TITLE>مدونتي</TITLE>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <style>
-          body {
+        body {
             direction: rtl;
-            margin: 0;
-            padding: 0;
-            
-            font-family: Tahoma, sans-serif;
-            font-size: 14px;
+
             text-align: justify;
-          }
-          label {
-            display: block;
-          }
-          
-          textarea {
-            display: block;
-          }
-          
-          #sidebar {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 20%;
-            background-color: #F5F5F5;
-            border-left: 1px solid #DEDEDE;
-            
-            padding: 20px;
-          }
-          
-          #content {
-            width: 50%;
-            margin-right: 25%;
-            padding-top: 30px;
-            
-          }
-          
-          #sidebar h3 {
-            margin-top: 100px;
-            color: #B3B3B3;
-          }
-          
-          #sidebar ul {
-            list-style: none;
-            padding: 0;
-          }
-          
-          a {
-              text-decoration: none;
-              color: #2200CC;
-          }
-          
-          article {
-            margin-bottom: 80px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #CCCCCC;
-             
-          }
-          
-          .btn {
-            background-color: #EEEEEE;
-            border: 2px solid #CCCCCC;
-            padding: 10px;
-            margin-left: 10px;
-          }
-          
-          #admin-blog-list {
-            margin-top: 60px;
-          
-          }
-          
+        }
+        
       </style>
+      
    </HEAD>
    <BODY>
-      <div id="sidebar">
-        <p>
-            <a href="/"><b>مدونة تجريبية باستخدام لفة روبي - أيمن جاب الله</b></a>
-            كل الشكر للمهندس مازن ميلباري - اللهم أجعله في ميزان حسناتك يا رب
-        </p>
-        <h3>تجدوني على العناوين التالية</h3>
-        <ul>
-            <li><a href="https://twitter.com/aymanjaballa">Twitter</a></li>
-            <li><a href="https://www.facebook.com/ayman.jaballa">Facebook</a></li>
-        </ul>
-        <h3><a href="/login">تسجيل الدخول</a></h3>
-        
-      </div>
-      <div id="content">
-        <%= yield %>
+      <div class="container">
+        <div class="page-header">
+            <ul class="nav nav-pills pull-left" >
+                <li role="presentation"><a href="#">عن المدونة</a></li>
+                <li role="presentation" class="active"><a href="/">الرئيسية</a></li>
+                <li role="presentation"><a href="/admin">تسجيل الدخول</a></li>
+            </ul>
+            <a href="/"><h1>مدونتي <small>لغة روبي</small></h1></a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <%= yield %>
+            </div>
+        </div>
       </div>
    </BODY>
 </HTML>
