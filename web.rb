@@ -12,7 +12,7 @@ Username = "admin"
 Password = "admin"
 
 get '/' do
-    @blogs = DB[:blogs].all
+    @blogs = DB[:blogs].all.reverse
     erb :index
 end
 
