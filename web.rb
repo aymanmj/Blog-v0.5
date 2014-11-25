@@ -3,7 +3,7 @@ require 'sequel'
 enable :sessions
 
 
-DB = Sequel.connect('postgres://postgres:56223911@localhost:5432/blogs')
+DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://postgres:56223911@localhost:5432/blogs')
 
 Username = "admin"
 Password = "admin"
