@@ -1,4 +1,4 @@
 ﻿<h3><%= @blog[:title] %></h3>
 <div >
-    <%= @blog[:content] %>
+    <%= RDiscount.new(@blog[:content]).to_html %>
 </div>

@@ -4,7 +4,7 @@
         <h3><%= b[:title] %></h3>
     </a>
     <div class="blog-summary">
-        <%= b[:summary] %>
+        <%= RDiscount.new(b[:summary]).to_html %>
     </div>
 </article>
 <% end %>
