@@ -4,6 +4,11 @@
         <label>عنوان التدوينة</label>
         <input type="text" name="title" class="form-control">
     </div>
+<div>
+    <script type="text/javascript" src="../nicEdit.js"></script>
+    <script type="text/javascript">
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+    </script>    
     <div class="form-group">
         <label>مختصر التدوينة</label>
         <textarea name="summary" class="form-control"></textarea>
@@ -14,5 +19,6 @@
     </div>
     <div class="form-group">
         <input type="submit" value="أضف التدوينة" class="btn btn-primary">
-    </div>    
+    </div> 
+</div>    
 </form>
